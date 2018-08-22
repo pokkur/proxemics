@@ -1,4 +1,4 @@
-Javascript library for Progressive Hover Effects.
+Javascript library for Progressive Hover Effects.  
 「徐々にHover」を制御するjavascriptライブラリです。
 > [demo](https://pokkur.github.io/proxemics/)
 
