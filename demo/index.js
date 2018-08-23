@@ -24,7 +24,7 @@ Proxemics('.prox', {
     }
 
     if(_.targetElement.classList.contains('four')) {
-        let speed = Math.min((_.distance / 500) + .2, .2).toFixed(1) // from 1 to .2
+        let speed = Math.min((_.distance / 500) + .2, 1).toFixed(1) // from 1 to .2
         Proxemics.SpeedTune = () => _.targetElement.style.setProperty('--speed', `${speed}s`)
         _.targetElement.style.color = `black`
         _.targetElement.addEventListener('animationiteration', Proxemics.SpeedTune)

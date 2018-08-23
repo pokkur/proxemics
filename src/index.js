@@ -2,13 +2,16 @@ const Proxemics = (
     target,
     {
         territory = 10,
-        debuggable = false,
         defaultProxemityClass = 'is-public',
         activeProxemityClass = 'is-proxemity',
         // socialClass = 'is-social',
         // personalClass = 'is-personal',
         intimateClass = 'is-intimate',
-        leftProxemityClass = 'is-left'
+        leftProxemityClass = 'is-left',
+        dataDistance = false,
+        dataAngle = false,
+        dataRadian = false,
+        debuggable = false
     },
     Approach = null
 ) => {
@@ -18,6 +21,10 @@ const Proxemics = (
     const DefaultProxemityClass = defaultProxemityClass
     const ActiveProxemityClass = activeProxemityClass
     const LeftProxemityClass = leftProxemityClass
+    const IntimateClass = intimateClass
+    const DataDistance = dataDistance
+    const DataAngle = dataAngle
+    const DataRadian = dataRadian
 
     if (typeof window.orientation === 'undefined' && TargetElements.length > 0) {
         Array.prototype.forEach.call(TargetElements, (targetElement) => {
@@ -34,9 +41,7 @@ const Proxemics = (
                 })
             })()
             + (Proxemics.DebbugText = () => {
-                const random = Math.random()
-                    .toString(36)
-                    .slice(-8)
+                const random = Math.random().toString(36).slice(-8)
                 TargetElements[TargetElements.length - 1].insertAdjacentHTML(
                     'afterend',
                     `<div class="distance-debug${random}"></div>`
@@ -62,15 +67,15 @@ const Proxemics = (
                 }
 
                 targetElement.classList.remove(LeftProxemityClass)
-                targetElement.setAttribute('data-distance', distance)
-                targetElement.setAttribute('data-angle', angle)
-                targetElement.setAttribute('data-radian', radian)
+                if (DataDistance) targetElement.setAttribute('data-distance', distance)
+                if (DataAngle) targetElement.setAttribute('data-angle', angle)
+                if (DataRadian) targetElement.setAttribute('data-radian', radian)
 
                 if (distance > 0) {
                     targetElement.classList.add(ActiveProxemityClass)
-                    targetElement.classList.remove(intimateClass)
+                    targetElement.classList.remove(IntimateClass)
                 } else if (distance <= 0) {
-                    targetElement.classList.add(intimateClass)
+                    targetElement.classList.add(IntimateClass)
                 }
 
                 Proxemics.Styles = (style = {}) => {
@@ -103,8 +108,9 @@ const Proxemics = (
                 targetElement.classList.remove(ActiveProxemityClass)
                 targetElement.classList.add(leftProxemityClass)
                 targetElement.setAttribute('style', '')
-                targetElement.removeAttribute('data-distance')
-                targetElement.removeAttribute('data-angle')
+                if (DataDistance) targetElement.removeAttribute('data-distance')
+                if (DataAngle) targetElement.removeAttribute('data-angle')
+                if (DataRadian) targetElement.removeAttribute('data-radian')
             })
         }
 
@@ -119,7 +125,7 @@ const Proxemics = (
             console.log('Proximics error: There is no selector onject on this document.') // eslint-disable-line no-console
         }
         if (typeof window.orientation !== 'undefined') {
-            console.log('Proximics warn: Hover effect working on desktop only.') // eslint-disable-line no-console
+            console.log('Proxemics warn: Only working on mouse device.') // eslint-disable-line no-console
         }
     }
 }

@@ -1,5 +1,5 @@
-Javascript library for Progressive Hover Effects.  
-「徐々にHover」を制御するjavascriptライブラリです。
+A JavaScript library for Progressive Hover Effects.
+「徐々にHover効果」を制御するJavaScriptライブラリです。
 > [demo](https://pokkur.github.io/proxemics/)
 
 ## Setup
@@ -22,7 +22,7 @@ Proxemics() function require QuerySelector and Parameters bracket.
 Proxemics('.prox', {})
 ```
 
-Proxemics objects holding `distance`, `radian`, `angle` parameters.
+Proxemics objects holding `distance`, `radian`, `angle` values.
 There can be controlling by data-attributes.
 Moreover, add class at right timings.
 
@@ -54,13 +54,11 @@ Proxemics('.prox', {
     }
 
     if(_.targetElement.classList.contains('four')) {
-        let speed = Math.max((_.distance / 500), .2).toFixed(1) // from 1 to .2
+        let speed = Math.min((_.distance / 500) + .2, 1).toFixed(1) // from 1 to .2
         Proxemics.SpeedTune = () => _.targetElement.style.setProperty('--speed', `${speed}s`)
-        if(_.distance <= 500) {
-            _.targetElement.style.color = `black`
-            _.targetElement.addEventListener('animationiteration', Proxemics.SpeedTune)
-            _.targetElement.innerHTML = speed
-        }
+        _.targetElement.style.color = `black`
+        _.targetElement.addEventListener('animationiteration', Proxemics.SpeedTune)
+        _.targetElement.innerHTML = speed
     }
 })
 ```
@@ -74,14 +72,14 @@ Proxemics('.prox', {
 
 #### Parameters
 
-|       parameter       |     default      |                                                                              |
-| --------------------- | ---------------- | ---------------------------------------------------------------------------- |
-| territory             | __10             | radius(px) / 半径                                                            |
-| debuggable            | _false_          | show debug / デバッグ表示                                                    |
-| defaultProxemityClass | _'is-public'_    | default permanence class / 通常の永続的に付与                                |
-| activeProxemityClass  | _'is-proxemity'_ | when if mousemove / mousemove時に付与                                        |
-| intimateClass         | _'is-intimate'_  | mousecursor in territory class / マウスカーソルがterritoryに入ったときに付与 |
-| leftProxemityClass    | _'is-left'_      | when if mouseleave / マウスカーソルがドキュメントから出た際に付与            |
+|       parameter       |     default      |                                                                           |
+| --------------------- | ---------------- | ------------------------------------------------------------------------- |
+| territory             | _10_             | radius of intimate (px) / 半径                                            |
+| debuggable            | _false_          | display debug / デバッグ表示                                              |
+| defaultProxemityClass | _'is-public'_    | default permanence class / 通常の永続的に付与                             |
+| activeProxemityClass  | _'is-proxemity'_ | when if mousemove / マウスカーソルがドキュメント上で移動している際に付与  |
+| intimateClass         | _'is-intimate'_  | mousecursor reached territory / マウスカーソルがterritoryに入った際に付与 |
+| leftProxemityClass    | _'is-left'_      | when if mouseleave / マウスカーソルがドキュメントから出た際に付与         |
 
 ## Next
 
