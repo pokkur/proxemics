@@ -33,11 +33,11 @@ const Proxemics = (
 
         if (Debuggable) {
             (Proxemics.InstancesInfo = () => {
-                Array.prototype.forEach.call(TargetElements, (targetElement) => {
-                    const TargetElement = targetElement
-                    const w = `w${targetElement.offsetLeft + targetElement.clientWidth / 2}px`
-                    const h = `h${targetElement.offsetTop + targetElement.clientHeight / 2}px`
-                    TargetElement.innerHTML = `${w} ${h}`
+                Array.prototype.forEach.call(TargetElements, (element) => {
+                    const el = element
+                    const w = `w${el.offsetLeft + el.clientWidth / 2}px`
+                    const h = `h${el.offsetTop + el.clientHeight / 2}px`
+                    el.innerHTML = `${w} ${h}`
                 })
             })()
             + (Proxemics.DebbugText = () => {
@@ -52,40 +52,40 @@ const Proxemics = (
         }
 
         const Calculator = () => {
-            Array.prototype.forEach.call(TargetElements, (targetElement) => {
-                const targetElementX = targetElement.offsetLeft + targetElement.clientWidth / 2
-                const targetElementY = targetElement.offsetTop + targetElement.clientHeight / 2
-                const squareRoot = (Math.sqrt(((Proxemics.X - targetElementX) ** 2) + ((Proxemics.Y - targetElementY) ** 2)) - Territory) // eslint-disable-line max-len
+            Array.prototype.forEach.call(TargetElements, (element) => {
+                const el = element
+                const elX = el.offsetLeft + el.clientWidth / 2
+                const elY = el.offsetTop + el.clientHeight / 2
+                const squareRoot = (Math.sqrt(((Proxemics.X - elX) ** 2) + ((Proxemics.Y - elY) ** 2)) - Territory) // eslint-disable-line max-len
                 const distance = ~~(Math.max(squareRoot, 0))
-                const radian = Math.atan2(Proxemics.Y - targetElementY, Proxemics.X - targetElementX) // eslint-disable-line max-len
+                const radian = Math.atan2(Proxemics.Y - elY, Proxemics.X - elX) // eslint-disable-line max-len
                 const angle = ~~((radian * 180) / Math.PI + 180)
 
                 if (Debuggable) {
                     Proxemics.Debug.innerHTML = `enter clientX ${Proxemics.X}px, clientY ${Proxemics.Y}px`
-                    const TargetElement = targetElement
-                    TargetElement.innerHTML = `${distance}px / ${angle}°`
+                    el.innerHTML = `${distance}px / ${angle}°`
                 }
 
-                targetElement.classList.remove(LeftProxemityClass)
-                if (DataDistance) targetElement.setAttribute('data-distance', distance)
-                if (DataAngle) targetElement.setAttribute('data-angle', angle)
-                if (DataRadian) targetElement.setAttribute('data-radian', radian)
+                el.classList.remove(LeftProxemityClass)
+                if (DataDistance) el.setAttribute('data-distance', distance)
+                if (DataAngle) el.setAttribute('data-angle', angle)
+                if (DataRadian) el.setAttribute('data-radian', radian)
 
                 if (distance > 0) {
-                    targetElement.classList.add(ActiveProxemityClass)
-                    targetElement.classList.remove(IntimateClass)
+                    el.classList.add(ActiveProxemityClass)
+                    el.classList.remove(IntimateClass)
                 } else if (distance <= 0) {
-                    targetElement.classList.add(IntimateClass)
+                    el.classList.add(IntimateClass)
                 }
 
                 Proxemics.Styles = (style = {}) => {
-                    Object.assign(targetElement.style, style)
+                    Object.assign(el.style, style)
                 }
                 const Data = {
                     distance,
                     angle,
                     radian,
-                    targetElement
+                    el
                 }
 
                 if (Approach != null) Approach(Data, Proxemics.Styles)
@@ -104,13 +104,14 @@ const Proxemics = (
                 Proxemics.InstancesInfo()
             }
 
-            Array.prototype.forEach.call(TargetElements, (targetElement) => {
-                targetElement.classList.remove(ActiveProxemityClass)
-                targetElement.classList.add(leftProxemityClass)
-                targetElement.setAttribute('style', '')
-                if (DataDistance) targetElement.removeAttribute('data-distance')
-                if (DataAngle) targetElement.removeAttribute('data-angle')
-                if (DataRadian) targetElement.removeAttribute('data-radian')
+            Array.prototype.forEach.call(TargetElements, (element) => {
+                const el = element
+                el.classList.remove(ActiveProxemityClass)
+                el.classList.add(leftProxemityClass)
+                el.setAttribute('style', '')
+                if (DataDistance) el.removeAttribute('data-distance')
+                if (DataAngle) el.removeAttribute('data-angle')
+                if (DataRadian) el.removeAttribute('data-radian')
             })
         }
 
