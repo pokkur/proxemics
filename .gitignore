@@ -40,6 +40,7 @@ lib
 package-lock.json
 yarn.lock
 
+hero.png
 yarn-error.log
 others
 .DS_Store

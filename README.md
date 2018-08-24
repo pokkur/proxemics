@@ -1,4 +1,6 @@
-A JavaScript library for Progressive Hover Effects.
+![alt](hero.min.png)
+
+A JavaScript library for Progressive Hover Effects.  
 「徐々にHover効果」を制御するJavaScriptライブラリです。
 > [demo](https://pokkur.github.io/proxemics/)
 
@@ -22,8 +24,8 @@ Proxemics() function require QuerySelector and Option bracket.
 Proxemics('.prox', {})
 ```
 
-Proxemics objects holding `distance`, `angle`, `radian` values.
-There can be controlling by Callbacks and if you want use to data-attributes.
+Proxemics objects holding `distance`, `angle`, `radian` values.  
+There can be controlling on callback function and if you want use to data-attributes.  
 Moreover, add/remove class at right timings.
 
 ### Optional ([demo](https://pokkur.github.io/proxemics/)) case
