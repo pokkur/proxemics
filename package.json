@@ -1,6 +1,6 @@
 {
     "name": "proxemics",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Javascript library for Progressive Hover Effects.",
     "main": "./lib/index.js",
     "scripts": {
