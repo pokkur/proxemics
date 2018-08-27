@@ -30,7 +30,7 @@ Moreover, add/remove class at right timings.
 
 ### Optional ([demo](https://pokkur.github.io/proxemics/)) case
 
-Callback functions for Proxemics 3rd param.
+Callback mthods for Proxemics 3rd param.
 
 ```js
 Proxemics('.prox', {
@@ -72,9 +72,9 @@ Proxemics('.prox', {
 <div class="four prox"></div>
 ```
 
-#### Parameters
+#### Options
 
-|       parameter       |     default      |                                                                         |
+|        Option         |     Default      |                               Description                               |
 | --------------------- | ---------------- | ----------------------------------------------------------------------- |
 | territory             | _10_             | radius of territory zone (px) / 半径                                    |
 | debuggable            | _false_          | display debug / デバッグを表示                                          |

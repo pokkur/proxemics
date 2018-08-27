@@ -1,14 +1,14 @@
 {
     "name": "proxemics",
-    "version": "0.0.5",
+    "version": "0.1.0",
     "description": "Javascript library for Progressive Hover Effects.",
-    "main": "./lib/index.js",
+    "module": "./lib/index/index.js",
+    "main": "./dist/proxemics.js",
     "scripts": {
         "clean": "rimraf lib",
         "lint": "eslint src",
-        "build": "cross-env BABEL_ENV=production babel src --out-dir lib && yarn demo",
-        "prepublish": "npm run clean && npm run lint && npm run build && yarn demo",
-        "demo": "webpack --config webpack.config.demo.js --mode production"
+        "prepublish": "yarn clean && yarn lint && yarn build",
+        "build": "webpack --config webpack.config.dist.js && cp dist/proxemics.js lib/index.js"
     },
     "files": [
         "lib",
@@ -46,25 +46,15 @@
         "webpack-dev-server": "^3.1.5"
     },
     "dependencies": {
-        "@babel/core": "^7.0.0-rc.2",
-        "@babel/polyfill": "^7.0.0-rc.2",
-        "@babel/preset-env": "^7.0.0-rc.2",
-        "babel-loader": "^8.0.0-beta.6",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^7.1.5",
+        "babel-plugin-add-module-exports": "^0.2.1",
+        "babel-preset-env": "^1.7.0",
         "webpack": "^4.16.3"
     },
     "browserslist": [
-        "> 1% in JP",
-        "ie 11",
-        "android > 4.0"
-    ],
-    "babel": {
-        "presets": [
-            [
-                "@babel/preset-env",
-                {
-                    "useBuiltIns": "entry"
-                }
-            ]
-        ]
-    }
+        "last 1 version",
+        "> 1%",
+        "not dead"
+    ]
 }
