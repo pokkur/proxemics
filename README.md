@@ -4,6 +4,12 @@ A JavaScript library for Progressive Hover Effects.
 「徐々にHover効果」を制御するJavaScriptライブラリです。
 > [demo](https://pokkur.github.io/proxemics/)
 
+## Change Info
+
+2018.08.27
+
+- Include browser library
+
 ## Setup
 
 ```command

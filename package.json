@@ -5,9 +5,8 @@
     "module": "./lib/index/index.js",
     "main": "./dist/proxemics.js",
     "scripts": {
-        "clean": "rimraf lib",
         "lint": "eslint src",
-        "prepublish": "yarn clean && yarn lint && yarn build",
+        "prepublish": "yarn lint && yarn build",
         "build": "webpack --config webpack.config.dist.js && cp dist/proxemics.js lib/index.js"
     },
     "files": [
