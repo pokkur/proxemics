@@ -1,4 +1,11 @@
 {
-    "presets": ["env"],
+    "presets": [
+        [
+            "env",
+            {
+                "useBuiltIns": true
+            }
+        ]
+    ],
     "plugins": ["add-module-exports"]
 }
