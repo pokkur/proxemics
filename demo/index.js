@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import Proxemics from '../lib'
+import Proxemics from '../lib/index.js'
 
 Proxemics('.prox', {
     territory: 100,

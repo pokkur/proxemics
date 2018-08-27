@@ -1,14 +1,14 @@
 {
     "name": "proxemics",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "Javascript library for Progressive Hover Effects.",
     "main": "./lib/index.js",
     "scripts": {
         "clean": "rimraf lib",
         "lint": "eslint src",
-        "build": "cross-env BABEL_ENV=production babel src --out-dir lib && npm run demo",
-        "prepublish": "npm run clean && npm run lint && npm run build && npm run demo",
-        "demo": "webpack --mode production"
+        "build": "cross-env BABEL_ENV=production babel src --out-dir lib && yarn demo",
+        "prepublish": "npm run clean && npm run lint && npm run build && yarn demo",
+        "demo": "webpack --config webpack.config.demo.js --mode production"
     },
     "files": [
         "lib",
@@ -56,5 +56,15 @@
         "> 1% in JP",
         "ie 11",
         "android > 4.0"
-    ]
+    ],
+    "babel": {
+        "presets": [
+            [
+                "@babel/preset-env",
+                {
+                    "useBuiltIns": "entry"
+                }
+            ]
+        ]
+    }
 }

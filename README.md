@@ -74,17 +74,17 @@ Proxemics('.prox', {
 
 #### Parameters
 
-|       parameter       |     default      |                                                                           |
-| --------------------- | ---------------- | ------------------------------------------------------------------------- |
-| territory             | _10_             | radius of territory zone (px) / 半径                                      |
-| debuggable            | _false_          | display debug / デバッグを表示                                            |
-| defaultProxemityClass | _'is-public'_    | default permanence class / 通常の永続的に付与                             |
-| activeProxemityClass  | _'is-proxemity'_ | when if mousemove / マウスカーソルがドキュメント上で移動している際に付与  |
-| intimateClass         | _'is-intimate'_  | mousecursor reached territory / マウスカーソルがterritoryに入った際に付与 |
-| leftProxemityClass    | _'is-left'_      | when if mouseleave / マウスカーソルがドキュメントから出た際に付与         |
-| dataDistance          | _false_          | inject distance value in data-distance/ data-distanceでdistance値を扱う   |
-| dataAngle             | _false_          | inject angle value in data-angle / data-angleでangle値を扱う              |
-| dataRadian            | _false_          | inject radian value in data-radian /data-radianでradian値を扱う           |
+|       parameter       |     default      |                                                                         |
+| --------------------- | ---------------- | ----------------------------------------------------------------------- |
+| territory             | _10_             | radius of territory zone (px) / 半径                                    |
+| debuggable            | _false_          | display debug / デバッグを表示                                          |
+| defaultProxemityClass | _'is-public'_    | default permanence class / Proxemics要素に永続的に付与                  |
+| activeProxemityClass  | _'is-proxemity'_ | when if mousemove / カーソルがドキュメント上で移動している際に付与      |
+| intimateClass         | _'is-intimate'_  | mousecursor reached territory / カーソルがterritoryに入った際に付与     |
+| leftProxemityClass    | _'is-left'_      | when if mouseleave / カーソルがドキュメントから出た際に付与             |
+| dataDistance          | _false_          | inject distance value in data-distance/ data-distanceでdistance値を扱う |
+| dataAngle             | _false_          | inject angle value in data-angle / data-angleでangle値を扱う            |
+| dataRadian            | _false_          | inject radian value in data-radian /data-radianでradian値を扱う         |
 
 ## Next
 

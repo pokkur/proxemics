@@ -2,10 +2,10 @@ const path = require('path')
 const root = path.resolve(__dirname, './')
 
 module.exports = {
-    entry: `${root}/src/index.js`,
+    entry: `${root}/demo/index.js`,
     output: {
-        path: `${root}/lib`,
-        filename: 'index.js'
+        path: `${root}/demo`,
+        filename: 'main.js'
     },
     module: {
         rules: [
@@ -18,7 +18,7 @@ module.exports = {
                         [
                             "@babel/preset-env",
                             {
-                                'useBuiltIns': 'usage'
+                                "useBuiltIns": "entry"
                             }
                         ]
                     ]
