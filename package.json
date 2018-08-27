@@ -1,6 +1,6 @@
 {
     "name": "proxemics",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "description": "Javascript library for Progressive Hover Effects.",
     "module": "./lib/index/index.js",
     "main": "./dist/proxemics.js",
@@ -10,6 +10,7 @@
         "build": "webpack --config webpack.config.dist.js && cp dist/proxemics.js lib/index.js"
     },
     "files": [
+        "dist",
         "lib",
         "src"
     ],
