@@ -196,9 +196,9 @@
             }
 
             if (_.el.classList.contains('four')) {
-                let speed = Math.min((_.distance / 500) + .2, 1).toFixed(1) // from 1 to .2
+                const speed = Math.min((_.distance / 500) + .2, 1).toFixed(1) // from 1 to .2
                 Proxemics.SpeedTune = () => _.el.style.setProperty('--speed', `${speed}s`)
-                _.el.style.color = `black`
+                _.el.style.color = 'black'
                 _.el.addEventListener('animationiteration', Proxemics.SpeedTune)
                 _.el.innerHTML = speed
             }

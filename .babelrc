@@ -1,11 +1,15 @@
 {
     "presets": [
         [
-            "env",
+            "@babel/preset-env",
             {
-                "useBuiltIns": true
+                "targets": {
+                    "browsers": "> 1%"
+                },
+                "modules": "false",
+                "useBuiltIns": "usage",
+                "debug": true
             }
         ]
-    ],
-    "plugins": ["add-module-exports"]
+    ]
 }
