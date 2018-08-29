@@ -16,8 +16,18 @@ A JavaScript library for Progressive Hover Effects.
 yarn add proxemics
 ```
 
+### npm
+
 ```js
 import Proxemics from 'proxemics'
+```
+
+or
+
+### browser
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/proxemics@0.2.0/dist/proxemics.js"></script>
 ```
 
 ## Usage
