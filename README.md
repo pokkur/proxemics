@@ -8,7 +8,7 @@ A JavaScript library for Progressive Hover Effects.
 
 2018.08.27
 
-- Include browser library
+- Add browser library
 
 ## Setup
 

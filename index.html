@@ -41,7 +41,9 @@
             height: 100%;
             margin: 0;
             overflow: hidden;
-            background: repeating-linear-gradient(90deg, rgba(255, 0, 0, 0.5), transparent 1px, transparent, transparent 99px, rgba(255, 192, 203, 0.5) 100px) repeat 0 0, repeating-linear-gradient(180deg, rgba(255, 0, 0, 0.5), transparent 1px, transparent, transparent 99px, rgba(255, 192, 203, 0.5) 100px) repeat 0 0;
+            background:
+                repeating-linear-gradient(90deg, rgba(255, 0, 0, 0.5), transparent 1px, transparent, transparent 99px, rgba(255, 192, 203, 0.5) 100px) repeat 0 0,
+                repeating-linear-gradient(180deg, rgba(255, 0, 0, 0.5), transparent 1px, transparent, transparent 99px, rgba(255, 192, 203, 0.5) 100px) repeat 0 0;
         }
 
         .prox {
@@ -171,7 +173,7 @@
     <div class="two prox"></div>
     <div class="three prox"></div>
     <div class="four prox"></div>
-    <script src="dist/proxemics.js"></script>
+    <script src="dist/proxemics.min.js"></script>
     <script>
         Proxemics('.prox', {
             territory: 100,
