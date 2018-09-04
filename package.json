@@ -1,6 +1,6 @@
 {
     "name": "proxemics",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "Javascript library for Progressive Hover Effects.",
     "module": "./lib/index/index.js",
     "main": "./dist/proxemics.min.js",
@@ -52,9 +52,7 @@
         "rollup-plugin-babel": "^4.0.0-beta.8",
         "rollup-plugin-commonjs": "^9.1.6",
         "rollup-plugin-node-resolve": "^3.3.0",
-        "rollup-plugin-uglify": "^4.0.0"
-    },
-    "dependencies": {
+        "rollup-plugin-uglify": "^4.0.0",
         "@babel/runtime-corejs2": "^7.0.0"
     }
 }

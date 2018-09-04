@@ -93,8 +93,8 @@ const Proxemics = (
         }
 
         const MouseMove = (event) => {
-            Proxemics.X = event.clientX
-            Proxemics.Y = event.clientY
+            Proxemics.X = event.pageX
+            Proxemics.Y = event.pageY
             Calculator()
         }
 
