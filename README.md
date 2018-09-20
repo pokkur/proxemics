@@ -27,7 +27,7 @@ or
 ### browser
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/proxemics@0.3.1/dist/proxemics.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/proxemics@latest/dist/proxemics.min.js"></script>
 ```
 
 ## Usage
