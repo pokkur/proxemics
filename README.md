@@ -107,6 +107,7 @@ Proxemics('.prox', {
 - [ ] throttle option
 - [ ] inherit original style
 - [ ] destroy method
+- [ ] canvas
 
 # License
 
