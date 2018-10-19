@@ -46,7 +46,7 @@ Moreover, add/remove class at right timings.
 
 ### Optional ([demo](https://pokkur.github.io/proxemics/)) case
 
-Callback mthods for Proxemics 3rd param.
+Callback mthods to Proxemics 3rd param.
 
 ```js
 Proxemics('.prox', {
