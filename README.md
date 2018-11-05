@@ -1,8 +1,13 @@
-![alt](hero.min.png)
-
 A JavaScript library for Progressive Hover Effects.  
 「徐々にHover効果」を制御するJavaScriptライブラリです。
 > [demo](https://pokkur.github.io/proxemics/)
+
+## Example
+
+- [smooth-slide](https://codepen.io/pokkur/pen/ZMVNNZ)
+- [smooth-zoom](https://codepen.io/pokkur/pen/MqjOrY)
+- [smooth-zoom2](https://codepen.io/pokkur/pen/JaNzmQ?editors=1010)
+- [misc](https://pokkur.github.io/proxemics/)
 
 ## Change Info
 
