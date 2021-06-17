@@ -109,6 +109,7 @@ Proxemics('.prox', {
 
 ## Next
 
+- [ ] box model territory
 - [ ] throttle option
 - [ ] inherit original style
 - [ ] destroy method
